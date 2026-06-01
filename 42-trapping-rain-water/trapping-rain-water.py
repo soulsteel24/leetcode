@@ -8,10 +8,10 @@ class Solution:
             r_max=max(height[r],r_max)
             
             if height[l]<height[r]:
-                water += min(l_max,r_max) - height[l]
+                water += l_max - height[l]
                 l += 1
             else:
-                water += min(l_max,r_max) - height[r]
+                water += r_max - height[r]
                 r -=1
         return water
                  
